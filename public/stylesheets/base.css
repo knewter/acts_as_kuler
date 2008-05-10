@@ -1,7 +1,14 @@
 body{
-  background-color: #161616;
+  background-color: #222;
   color: white;
   font-family: "Bitstream Vera Sans",sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#container{
+  margin: 0 10%;
+  background-color: #161616;
+  padding: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
   color: #999;
@@ -147,3 +154,10 @@ table.colorpicker{
     text-align: center;  
     width: 100%;  
 }  
+
+input.button{
+  background-color: #333;
+  padding: 4px 6px;
+  color: #eee;
+  border: 0;
+}
