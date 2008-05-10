@@ -1,5 +1,5 @@
 class ThemesController < ApplicationController
-  before_filter :login_required
+  before_filter :login_required, :except => [:index]
 
   before_filter :load_themes, :only => [:index]
   before_filter :load_theme
