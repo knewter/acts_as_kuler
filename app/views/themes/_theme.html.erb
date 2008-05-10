@@ -1,4 +1,4 @@
-<%= link_to theme.name, theme_path(theme) -%>
+<%= link_to theme.name, theme_path(theme) -%> by <%= theme.creator -%>
 <a href='<%= theme_path(theme) -%>'>
   <ul class='color-bar mini'>
     <% theme.colors.each do |color| -%>

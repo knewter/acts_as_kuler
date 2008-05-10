@@ -1,5 +1,7 @@
 require 'digest/sha1'
 class User < ActiveRecord::Base
+  model_stamper
+
   # Virtual attribute for the unencrypted password
   attr_accessor :password
 
@@ -94,6 +96,10 @@ class User < ActiveRecord::Base
   # Returns true if the user has just been activated.
   def recently_activated?
     @activated
+  end
+
+  def to_s
+    login
   end
 
   protected

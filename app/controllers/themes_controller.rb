@@ -1,4 +1,6 @@
 class ThemesController < ApplicationController
+  before_filter :login_required
+
   before_filter :load_themes, :only => [:index]
   before_filter :load_theme
 

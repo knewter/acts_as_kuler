@@ -66,6 +66,9 @@ module AuthenticatedSystem
           store_location
           redirect_to new_session_path
         end
+        format.js do  
+          render(:update) { |page| page.redirect_to(:controller => '/account', :action => 'login') }  
+        end  
         format.any do
           request_http_basic_authentication 'Web Password'
         end

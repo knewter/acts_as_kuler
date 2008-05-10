@@ -1,4 +1,6 @@
-<h1><%= theme.name -%></h1>
+<h2><%= theme.name -%></h2>
+<h3>by <%= theme.creator -%></h3>
+<%= render :partial => "ratings/rate", :locals => { :asset => theme } %>  
 <ul class='subnav'>
   <li><%= link_to 'Create a new theme based on this one', copy_theme_path(theme) -%></li>
 </ul>

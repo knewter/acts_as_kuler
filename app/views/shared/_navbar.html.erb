@@ -1,9 +1,10 @@
 <ul id='nav'>
   <li><%= link_to 'Home', themes_path -%></li>
   <% if logged_in? -%>
-    <li><%= link_to 'Log in',  login_path -%></li>
-  <% else -%>
     <li><%= link_to 'Log out', logout_path -%></li>
+  <% else -%>
+    <li><%= link_to 'Log in',  login_path -%></li>
+    <li><%= link_to 'Sign up', signup_path -%></li>
   <% end -%>
 </ul>
 <div class='clear'></div>

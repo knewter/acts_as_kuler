@@ -11,4 +11,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :themes, :has_many => [:colors], :member => [:copy]
   map.connect '', :controller => 'themes'
+
+  # Install the default route as the lowest priority.
+  map.connect ':controller/:action/:id.:format'
+  map.connect ':controller/:action.:format'
+  map.connect ':controller/:action/:id'
 end
