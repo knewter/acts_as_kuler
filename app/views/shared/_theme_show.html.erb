@@ -1,7 +1,7 @@
 <%= link_to theme.name, theme_path(theme) -%>
 <ul class='color-bar mini'>
-  <% @theme.colors.each do |color| -%>
-    <li style='background-color: #<%= color.hex -%>' id="<%= dom_id(color) -%>"><%= link_to '&nbsp', theme_path(@theme) -%></li>
+  <% theme.colors.each do |color| -%>
+    <li style='background-color: #<%= color.hex -%>' id="<%= dom_id(color) -%>"><%= link_to '&nbsp', theme_path(theme) -%></li>
   <% end -%>
 </ul>
 <div class='clear'></div>
