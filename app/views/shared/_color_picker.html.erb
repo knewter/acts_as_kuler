@@ -26,7 +26,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 <table class='colorpicker'>
   <tr>
-    <td valign="top">
+    <td valign="top" class='colormap'>
       <div id="<%= options[:name] -%>_ColorMap"></div>
     </td>
     <td valign="top">
@@ -50,7 +50,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             <label for="<%= options[:name] -%>_HueRadio">H:</label>
           </td>
           <td>
-            <input type="text" id="<%= options[:name] -%>_Hue" value="0" style="width: 40px;" /> &deg;
+            <input type="text" class='text' id="<%= options[:name] -%>_Hue" value="0" style="width: 40px;" /> &deg;
           </td>
         </tr>
 
@@ -62,7 +62,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             <label for="<%= options[:name] -%>_SaturationRadio">S:</label>
           </td>
           <td>
-            <input type="text" id="<%= options[:name] -%>_Saturation" value="100" style="width: 40px;" /> %
+            <input type="text" class='text' id="<%= options[:name] -%>_Saturation" value="100" style="width: 40px;" /> %
           </td>
         </tr>
 
@@ -74,7 +74,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             <label for="<%= options[:name] -%>_BrightnessRadio">B:</label>
           </td>
           <td>
-            <input type="text" id="<%= options[:name] -%>_Brightness" value="100" style="width: 40px;" /> %
+            <input type="text" class='text' id="<%= options[:name] -%>_Brightness" value="100" style="width: 40px;" /> %
           </td>
         </tr>
 
@@ -92,7 +92,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             <label for="<%= options[:name] -%>_RedRadio">R:</label>
           </td>
           <td>
-            <input type="text" id="<%= options[:name] -%>_Red" value="255" style="width: 40px;" />
+            <input type="text" class='text' id="<%= options[:name] -%>_Red" value="255" style="width: 40px;" />
           </td>
         </tr>
 
@@ -104,7 +104,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             <label for="<%= options[:name] -%>_GreenRadio">G:</label>
           </td>
           <td>
-            <input type="text" id="<%= options[:name] -%>_Green" value="0" style="width: 40px;" />
+            <input type="text" class='text' id="<%= options[:name] -%>_Green" value="0" style="width: 40px;" />
           </td>
         </tr>
 
@@ -116,7 +116,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             <label for="<%= options[:name] -%>_BlueRadio">B:</label>
           </td>
           <td>
-            <input type="text" id="<%= options[:name] -%>_Blue" value="0" style="width: 40px;" />
+            <input type="text" class='text' id="<%= options[:name] -%>_Blue" value="0" style="width: 40px;" />
           </td>
         </tr>
 
@@ -126,7 +126,7 @@ OTHER DEALINGS IN THE SOFTWARE.
             #:
           </td>
           <td colspan="2">
-            <input type="text" id="<%= options[:name] -%>_Hex" name="<%= options[:name] -%>_Hex" value="FF0000" style="width: 60px;" />
+            <input type="text" class='text' id="<%= options[:name] -%>_Hex" name="<%= options[:name] -%>_Hex" value="FF0000" style="width: 60px;" />
           </td>
         </tr>
 

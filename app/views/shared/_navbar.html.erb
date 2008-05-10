@@ -1,5 +1,7 @@
 <ul id='nav'>
-  <li><%= link_to 'Home', themes_path -%></li>
+  <li><%= link_to 'Popular', popular_themes_path -%></li>
+  <li><%= link_to 'Recent',  themes_path -%></li>
+  <li><%= link_to 'Create',  new_theme_path %></li>
   <% if logged_in? -%>
     <li><%= link_to 'Log out', logout_path -%></li>
   <% else -%>

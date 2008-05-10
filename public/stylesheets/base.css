@@ -17,12 +17,21 @@ td.color{
   height: 100px;
   width: 200px;
 }
+ul.color-bar{
+  margin: auto 0;
+}
 ul.color-bar li{
   list-style: none;
   height: 100px;
-  width: 19%;
+  width: 19.9%;
   float: left;
   position: relative;
+}
+ul.color-bar li.active{
+  width: 19%;
+}
+ul.color-bar.mini{
+  margin: 10px 0;
 }
 ul.color-bar.mini li{
   height: 20px;
@@ -86,6 +95,9 @@ a:hover {
 }
 table.colorpicker{
   width: auto;
+}
+table.colorpicker td{
+  padding: 0;
 }
 
 .star-rating,  
@@ -171,4 +183,8 @@ input.button{
 .theme-header h3{
   color: #959595;
   font-size: 100%;
+}
+.theme-header .star-ratings-block{
+  float: right;
+  width: 150px;
 }

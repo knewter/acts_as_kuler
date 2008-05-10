@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
 
-  map.resources :themes, :has_many => [:colors], :member => [:copy]
+  map.resources :themes, :has_many => [:colors], :member => [:copy], :collection => [:popular]
   map.connect '', :controller => 'themes'
 
   # Install the default route as the lowest priority.

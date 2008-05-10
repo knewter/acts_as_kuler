@@ -6,7 +6,7 @@ class ThemesController < ApplicationController
 
   protected
   def load_themes
-    @themes = Theme.find(:all)
+    @themes = Theme.find(:all, :order => 'created_at desc')
   end
 
   def load_theme
@@ -23,6 +23,18 @@ class ThemesController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @themes }
     end
+  end
+
+  def popular
+    @themes = Theme.find(:all, 
+                         :select => "themes.*, avg(ratings.rating) AS rating, count(ratings.rating) AS votes",
+                         :joins => "LEFT JOIN ratings ON themes.id = ratings.rateable_id",
+                         :conditions => "ratings.rateable_type = 'Theme'",
+                         :group => "ratings.rateable_id",
+                         :order => "rating DESC, votes DESC",
+                         :limit => 10)
+    load_theme
+    render :action => 'index'
   end
 
   # GET /themes/1
