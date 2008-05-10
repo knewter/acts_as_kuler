@@ -2,9 +2,6 @@ class Theme < ActiveRecord::Base
   has_many :colors
   acts_as_rateable :average => true
 
-  validates_presence_of :creator_id
-  validates_associated :creator
-
   stampable
 
   before_create :set_default_colors
