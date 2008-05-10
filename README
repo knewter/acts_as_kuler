@@ -1,6 +1,10 @@
 == Acts as Kuler ==
 This is intended as a sort of open source version of adobe's kuler tool.
 
+It is a web site in which one can create themes of five colors, and rate them, and clone someone else's theme.
+There should be commenting too.  And unicorns.
+
 Things I'd like to do:
-- implement starbox: http://www.nickstakenburg.com/projects/starbox/
-  - Might scratch this, the license is crappy
+  - implement starbox: http://www.nickstakenburg.com/projects/starbox/
+    - Might scratch this, the license is crap
+  - implement a better star rater: http://www.komodomedia.com/blog/2007/01/css-star-rating-redux/

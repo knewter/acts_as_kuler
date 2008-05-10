@@ -3,12 +3,12 @@ body{
   color: white;
   font-family: "Bitstream Vera Sans",sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+  color: #999;
+}
 td.color{
   height: 100px;
   width: 200px;
-}
-ul{
-  margin-left: -48px;
 }
 ul.color-bar li{
   list-style: none;
@@ -37,13 +37,32 @@ ul.color-bar.mini li a{
 .clear{
   clear: both;
 }
+ul#nav{
+  float: right;
+}
 ul#nav li{
   float: left;
   list-style: none;
 }
+ul#nav li a{
+  padding: 6px 10px;
+  margin-right: 10px;
+  background-color: #333;
+}
+ul#nav li a:hover {
+  background-color: #444;
+  color: white;
+}
 a{
   color: white;
 }
+a:hover {
+  color: #ddd;
+}
+#header h1{
+  float: left;
+}
+
 .star-rating,  
 .star-rating a:hover,  
 .star-rating a:active,  

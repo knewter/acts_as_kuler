@@ -6,12 +6,13 @@
     <script type="text/javascript" src="/refresh_web/colorpicker/ColorValuePicker.js" ></script>
     <script type="text/javascript" src="/refresh_web/colorpicker/Slider.js" ></script>
     <script type="text/javascript" src="/refresh_web/colorpicker/ColorPicker.js" ></script>
-    <%= stylesheet_link_tag 'base' -%>
+    <%= stylesheet_link_tag 'blueprint/screen', 'base' -%>
   </head>
   <body id="<%= params[:controller] -%>" class="<%= params[:action] -%>">
     <div id='header'>
       <h1>Acts As Kuler</h1>
       <%= render :partial => 'shared/navbar' -%>
+      <div class='clear'></div>
     </div>
     <%= yield -%>
   </body>
