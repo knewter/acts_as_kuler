@@ -46,6 +46,10 @@ class ThemesController < ApplicationController
   # POST /themes.xml
   def create
     @theme = Theme.new(params[:theme])
+    @copy_theme = Theme.find_by_id(params[:copy_theme_id])
+    if @copy_theme
+      @theme.clone_colors_from(@copy_theme)
+    end
 
     respond_to do |format|
       if @theme.save
@@ -83,5 +87,11 @@ class ThemesController < ApplicationController
       format.html { redirect_to(themes_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def copy
+    @copy_theme = @theme
+    @theme = Theme.new
+    render :action => 'themes/new'
   end
 end

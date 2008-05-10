@@ -11,6 +11,7 @@
   <p>
     <%= f.submit "Create" %>
   </p>
+  <%= hidden_field_tag(:copy_theme_id, @copy_theme.id) if @copy_theme -%>
 <% end %>
 
 <%= link_to 'Back', themes_path %>
