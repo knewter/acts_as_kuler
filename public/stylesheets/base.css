@@ -161,3 +161,13 @@ input.button{
   color: #eee;
   border: 0;
 }
+
+.theme-header h2, .theme-header h3{
+  display: inline;
+}
+.theme-header h2{
+  color: #46727F;
+}
+.theme-header h3{
+  color: #959595;
+}
