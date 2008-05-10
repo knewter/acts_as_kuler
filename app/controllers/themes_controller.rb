@@ -28,7 +28,7 @@ class ThemesController < ApplicationController
   # GET /themes/1
   # GET /themes/1.xml
   def show
-    redirect_to theme_colors_path(@theme)
+    redirect_to themes_path(:id => @theme)
   end
 
   # GET /themes/new
