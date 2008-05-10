@@ -9,11 +9,13 @@
     <%= stylesheet_link_tag 'blueprint/screen', 'base' -%>
   </head>
   <body id="<%= params[:controller] -%>" class="<%= params[:action] -%>">
-    <div id='header'>
-      <h1>Acts As Kuler</h1>
-      <%= render :partial => 'shared/navbar' -%>
-      <div class='clear'></div>
+    <div class='span-24 last'>
+      <div id='header'>
+        <h1>Acts As Kuler</h1>
+        <%= render :partial => 'shared/navbar' -%>
+        <div class='clear'></div>
+      </div>
+      <%= yield -%>
     </div>
-    <%= yield -%>
   </body>
 </html>

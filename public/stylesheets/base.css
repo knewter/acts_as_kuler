@@ -15,10 +15,13 @@ ul.color-bar li{
   height: 100px;
   width: 19%;
   float: left;
+  position: relative;
 }
 ul.color-bar.mini li{
   height: 20px;
   width: 50px;
+  top: 0;
+  left: 0;
 }
 ul.color-bar li.active{
   border: 2px solid white;
@@ -29,6 +32,18 @@ ul.color-bar li a{
   display: block;
   height: 100px;
   text-decoration: none;
+}
+ul.color-bar li span.hex{
+ position: absolute;
+ left: 0;
+ top: 0; 
+ padding: 4px 6px;
+ background-color: #111;
+ color: #eee;
+ display: none;
+}
+ul.color-bar li:hover span.hex{
+ display: block;
 }
 ul.color-bar.mini li a{
   height: 20px;
@@ -61,6 +76,9 @@ a:hover {
 }
 #header h1{
   float: left;
+}
+table.colorpicker{
+  width: auto;
 }
 
 .star-rating,  
@@ -97,7 +115,7 @@ a:hover {
 }  
 .star-rating a:hover,  
 .star-rating a:active,  
-.star-rating a:focus{  
+.star-rating a:focus {   
     background-position: center left;  
 }  
 .star-rating a.one-stars{  

@@ -4,7 +4,10 @@
       klass = ''
       klass << 'active' if color == @color
     -%>
-    <li style='background-color: #<%= color.hex -%>' class='<%= klass -%>' id="<%= dom_id(color) -%>"><%= link_to '&nbsp', edit_theme_color_path(@theme, color) -%></li>
+    <li style='background-color: #<%= color.hex -%>' class='<%= klass -%>' id="<%= dom_id(color) -%>">
+      <%= link_to '&nbsp', edit_theme_color_path(@theme, color) -%>
+      <span class='hex'>#<%= color.hex -%></span>
+    </li>
   <% end -%>
 </ul>
 <div class='clear'></div>
