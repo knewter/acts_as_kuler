@@ -1,0 +1,9 @@
+<h1>Listing themes</h1>
+
+<% for theme in @themes %>
+  <%= theme_show theme -%>
+<% end %>
+
+<br />
+
+<%= link_to 'New theme', new_theme_path %>

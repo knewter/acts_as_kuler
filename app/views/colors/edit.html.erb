@@ -1,0 +1,9 @@
+<h1>Editing color</h1>
+
+<%= colors_bar @colors -%>
+
+<%= error_messages_for :color %>
+<% form_for [@theme, @color] do -%>
+  <%= color_picker :name => 'cp1', :color => @color.hex, :observe_id => dom_id(@color) -%>
+  <%= submit_tag -%>
+<% end -%>

@@ -1,0 +1,182 @@
+<!--
+Copyright (c) 2007 John Dyer (http://johndyer.name)
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+
+<table>
+  <tr>
+    <td valign="top">
+      <div id="<%= options[:name] -%>_ColorMap"></div>
+    </td>
+    <td valign="top">
+      <div id="<%= options[:name] -%>_ColorBar"></div>
+    </td>
+
+    <td valign="top">
+      <table>
+        <tr>
+          <td colspan="3">
+            <div id="<%= options[:name] -%>_Preview" style="background-color: #fff; width: 60px; height: 60px; padding: 0; margin: 0; border: solid 1px #000;">
+              <br />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" id="<%= options[:name] -%>_HueRadio" name="<%= options[:name] -%>_Mode" value="0" />
+          </td>
+          <td>
+            <label for="<%= options[:name] -%>_HueRadio">H:</label>
+          </td>
+          <td>
+            <input type="text" id="<%= options[:name] -%>_Hue" value="0" style="width: 40px;" /> &deg;
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="radio" id="<%= options[:name] -%>_SaturationRadio" name="<%= options[:name] -%>_Mode" value="1" />
+          </td>
+          <td>
+            <label for="<%= options[:name] -%>_SaturationRadio">S:</label>
+          </td>
+          <td>
+            <input type="text" id="<%= options[:name] -%>_Saturation" value="100" style="width: 40px;" /> %
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="radio" id="<%= options[:name] -%>_BrightnessRadio" name="<%= options[:name] -%>_Mode" value="2" />
+          </td>
+          <td>
+            <label for="<%= options[:name] -%>_BrightnessRadio">B:</label>
+          </td>
+          <td>
+            <input type="text" id="<%= options[:name] -%>_Brightness" value="100" style="width: 40px;" /> %
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" height="5">
+
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="radio" id="<%= options[:name] -%>_RedRadio" name="<%= options[:name] -%>_Mode" value="r" />
+          </td>
+          <td>
+            <label for="<%= options[:name] -%>_RedRadio">R:</label>
+          </td>
+          <td>
+            <input type="text" id="<%= options[:name] -%>_Red" value="255" style="width: 40px;" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="radio" id="<%= options[:name] -%>_GreenRadio" name="<%= options[:name] -%>_Mode" value="g" />
+          </td>
+          <td>
+            <label for="<%= options[:name] -%>_GreenRadio">G:</label>
+          </td>
+          <td>
+            <input type="text" id="<%= options[:name] -%>_Green" value="0" style="width: 40px;" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="radio" id="<%= options[:name] -%>_BlueRadio" name="<%= options[:name] -%>_Mode" value="b" />
+          </td>
+          <td>
+            <label for="<%= options[:name] -%>_BlueRadio">B:</label>
+          </td>
+          <td>
+            <input type="text" id="<%= options[:name] -%>_Blue" value="0" style="width: 40px;" />
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            #:
+          </td>
+          <td colspan="2">
+            <input type="text" id="<%= options[:name] -%>_Hex" name="<%= options[:name] -%>_Hex" value="FF0000" style="width: 60px;" />
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+<div style="display:none;">
+<img src="/refresh_web/colorpicker/images/rangearrows.gif" />
+<img src="/refresh_web/colorpicker/images/mappoint.gif" />
+
+<img src="/refresh_web/colorpicker/images/bar-saturation.png" />
+<img src="/refresh_web/colorpicker/images/bar-brightness.png" />
+
+<img src="/refresh_web/colorpicker/images/bar-blue-tl.png" />
+<img src="/refresh_web/colorpicker/images/bar-blue-tr.png" />
+<img src="/refresh_web/colorpicker/images/bar-blue-bl.png" />
+<img src="/refresh_web/colorpicker/images/bar-blue-br.png" />
+<img src="/refresh_web/colorpicker/images/bar-red-tl.png" />
+<img src="/refresh_web/colorpicker/images/bar-red-tr.png" />
+<img src="/refresh_web/colorpicker/images/bar-red-bl.png" />
+<img src="/refresh_web/colorpicker/images/bar-red-br.png" /> 
+<img src="/refresh_web/colorpicker/images/bar-green-tl.png" />
+<img src="/refresh_web/colorpicker/images/bar-green-tr.png" />
+<img src="/refresh_web/colorpicker/images/bar-green-bl.png" />
+<img src="/refresh_web/colorpicker/images/bar-green-br.png" />
+
+<img src="/refresh_web/colorpicker/images/map-red-max.png" />
+<img src="/refresh_web/colorpicker/images/map-red-min.png" />
+<img src="/refresh_web/colorpicker/images/map-green-max.png" />
+<img src="/refresh_web/colorpicker/images/map-green-min.png" />
+<img src="/refresh_web/colorpicker/images/map-blue-max.png" />
+<img src="/refresh_web/colorpicker/images/map-blue-min.png" />
+
+<img src="/refresh_web/colorpicker/images/map-saturation.png" />
+<img src="/refresh_web/colorpicker/images/map-saturation-overlay.png" />
+<img src="/refresh_web/colorpicker/images/map-brightness.png" />
+<img src="/refresh_web/colorpicker/images/map-hue.png" />
+</div>
+
+<script type="text/javascript">
+Event.observe(window,'load',function() {
+ var <%= options[:name] -%> = new Refresh.Web.ColorPicker('<%= options[:name] -%>',{startHex: '<%= options[:color] -%>', startMode:'s'});
+});
+<% if options[:observe_id] -%>
+  function handleColorChange(field){
+    $('<%= options[:observe_id] -%>').style.backgroundColor = "#" + field.value;
+  }
+  new Form.Element.Observer($('<%= options[:name] -%>_Hex'), 1, handleColorChange);
+<% end -%>
+</script>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  red: 1
+  green: 1
+  blue: 1
+  theme_id: 1
+
+two:
+  red: 1
+  green: 1
+  blue: 1
+  theme_id: 1

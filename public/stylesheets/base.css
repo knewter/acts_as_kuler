@@ -1,0 +1,45 @@
+body{
+  background-color: #161616;
+  color: white;
+  font-family: "Bitstream Vera Sans",sans-serif;
+}
+td.color{
+  height: 100px;
+  width: 200px;
+}
+ul.color-bar li{
+  list-style: none;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+ul.color-bar.mini li{
+  height: 20px;
+  width: 50px;
+}
+ul.color-bar li.active{
+  border: 2px solid white;
+  position: relative;
+  top: -2px;
+}
+ul.color-bar li a{
+  display: block;
+  width: 100px;
+  height: 100px;
+  text-decoration: none;
+}
+ul.color-bar.mini li a{
+  height: 20px;
+  width: 50px;
+}
+.clear{
+  clear: both;
+}
+ul#nav li{
+  float: left;
+  list-style: none;
+}
+a{
+  color: white;
+}
+body#themes.index

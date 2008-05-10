@@ -1,0 +1,17 @@
+<h1>Editing theme</h1>
+
+<%= error_messages_for :theme %>
+
+<% form_for(@theme) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @theme %> |
+<%= link_to 'Back', themes_path %>
