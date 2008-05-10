@@ -10,6 +10,10 @@ body{
   background-color: #161616;
   padding: 16px;
 }
+#footer{
+  margin: 10px 10%;
+  text-align: center;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #999;
 }
