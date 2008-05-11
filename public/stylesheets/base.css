@@ -31,9 +31,6 @@ ul.color-bar li{
   float: left;
   position: relative;
 }
-ul.color-bar li.active{
-  width: 19%;
-}
 ul.color-bar.mini{
   margin: 10px 0;
 }
@@ -47,6 +44,7 @@ ul.color-bar li.active{
   border: 2px solid white;
   position: relative;
   top: -2px;
+  width: 19%;
 }
 ul.color-bar li a{
   display: block;
